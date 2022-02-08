@@ -12,10 +12,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: AppConfig.appName,
       theme: ThemeData(
-        colorScheme: ColorScheme.light().copyWith(
-          
-        )
-      ),
+          colorScheme: const ColorScheme.light().copyWith(
+        primary: AppConfig.primaryColor,
+      )),
       home: const HomeView(),
     );
   }
