@@ -2,7 +2,7 @@ import 'dart:developer';
 
 import 'package:dio/dio.dart';
 import 'package:hospital/src/config/app_config.dart';
-import 'package:hospital/src/models/hosptial.models.dart';
+import 'package:hospital/src/models/ambulance.models.dart';
 
 class HospitalServices {
   HospitalServices._();

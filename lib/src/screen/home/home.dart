@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:hospital/src/models/hosptial.models.dart';
+import 'package:hospital/src/models/ambulance.models.dart';
 import 'package:hospital/src/provider/hospital.provider.dart';
 import 'package:hospital/src/screen/home/widgets/ambulance_card.dart';
 import 'package:hospital/src/screen/home/widgets/body_painter.dart';

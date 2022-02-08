@@ -3,7 +3,7 @@ import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-import 'package:hospital/src/models/hosptial.models.dart';
+import 'package:hospital/src/models/ambulance.models.dart';
 import 'package:hospital/src/services/hospital.services.dart';
 
 class HospitalState extends ChangeNotifier {

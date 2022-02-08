@@ -1,6 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:hospital/src/models/hosptial.models.dart';
+import 'package:hospital/src/models/ambulance.models.dart';
 
 class AmbulanceCard extends StatelessWidget {
   final Ambulance ambulance;
