@@ -4,14 +4,14 @@
 
 import 'dart:convert';
 
-List<Hosptial> hosptialFromJson(String str) =>
-    List<Hosptial>.from(json.decode(str).map((x) => Hosptial.fromJson(x)));
+List<Hospital> hosptialFromJson(String str) =>
+    List<Hospital>.from(json.decode(str).map((x) => Hospital.fromJson(x)));
 
-String hosptialToJson(List<Hosptial> data) =>
+String hosptialToJson(List<Hospital> data) =>
     json.encode(List<dynamic>.from(data.map((x) => x.toJson())));
 
-class Hosptial {
-  Hosptial({
+class Hospital {
+  Hospital({
     this.userId,
     this.id,
     this.title,
@@ -23,7 +23,7 @@ class Hosptial {
   String? title;
   String? body;
 
-  factory Hosptial.fromJson(Map<String, dynamic> json) => Hosptial(
+  factory Hospital.fromJson(Map<String, dynamic> json) => Hospital(
         userId: json["userId"],
         id: json["id"],
         title: json["title"],

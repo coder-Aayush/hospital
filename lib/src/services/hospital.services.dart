@@ -11,12 +11,12 @@ class HospitalServices {
 
   final Dio _dio = Dio();
 
-  Future<List<Hosptial>> fetchHospital() async {
+  Future<List<Hospital>> fetchHospital() async {
     try {
       Response response = await _dio.get("${AppConfig.baseUrl}/posts");
       if (response.statusCode == 200) {
         return response.data
-            .map((hospital) => Hosptial.fromJson(hospital))
+            .map((hospital) => Hospital.fromJson(hospital))
             .toList();
       } else {
         throw "Failed to Fetch Hosptial Data";
