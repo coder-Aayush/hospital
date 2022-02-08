@@ -11,7 +11,7 @@ fluttertoast: ^8.0.8
 ```
 
 ## App Demo Link
-[Download Here]()
+`Navigate to Action Tab to Download App`
 
 
 
