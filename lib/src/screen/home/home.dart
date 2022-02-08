@@ -45,6 +45,7 @@ class HomeView extends StatelessWidget {
                     final _hospitalState = ref.watch(hospitalProvider);
                     if (_hospitalState.hospitals == null) {
                       return const Center(child: CircularProgressIndicator());
+                      // ignore: prefer_is_empty
                     } else if (_hospitalState.hospitals!.length == 0) {
                       return const Center(child: Text("No Ambulance Near You"));
                     } else {
