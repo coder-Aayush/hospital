@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:hospital/src/config/app_config.dart';
 import 'package:hospital/src/screen/home/home.dart';
 
@@ -9,13 +10,15 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: AppConfig.appName,
-      theme: ThemeData(
-          colorScheme: const ColorScheme.light().copyWith(
-        primary: AppConfig.primaryColor,
-      )),
-      home: const HomeView(),
+    return ProviderScope(
+      child: MaterialApp(
+        title: AppConfig.appName,
+        theme: ThemeData(
+            colorScheme: const ColorScheme.light().copyWith(
+          primary: AppConfig.primaryColor,
+        )),
+        home: const HomeView(),
+      ),
     );
   }
 }

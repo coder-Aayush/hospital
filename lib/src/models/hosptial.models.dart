@@ -1,39 +1,31 @@
-// To parse this JSON data, do
-//
-//     final hosptial = hosptialFromJson(jsonString);
-
-import 'dart:convert';
-
-List<Hospital> hosptialFromJson(String str) =>
-    List<Hospital>.from(json.decode(str).map((x) => Hospital.fromJson(x)));
-
-String hosptialToJson(List<Hospital> data) =>
-    json.encode(List<dynamic>.from(data.map((x) => x.toJson())));
-
-class Hospital {
-  Hospital({
-    this.userId,
+class Ambulance {
+  Ambulance({
+    this.albumId,
     this.id,
     this.title,
-    this.body,
+    this.url,
+    this.thumbnailUrl,
   });
 
-  int? userId;
+  int? albumId;
   int? id;
   String? title;
-  String? body;
+  String? url;
+  String? thumbnailUrl;
 
-  factory Hospital.fromJson(Map<String, dynamic> json) => Hospital(
-        userId: json["userId"],
+  factory Ambulance.fromMap(Map<String, dynamic> json) => Ambulance(
+        albumId: json["albumId"],
         id: json["id"],
         title: json["title"],
-        body: json["body"],
+        url: json["url"],
+        thumbnailUrl: json["thumbnailUrl"],
       );
 
-  Map<String, dynamic> toJson() => {
-        "userId": userId,
+  Map<String, dynamic> toMap() => {
+        "albumId": albumId,
         "id": id,
         "title": title,
-        "body": body,
+        "url": url,
+        "thumbnailUrl": thumbnailUrl,
       };
 }
